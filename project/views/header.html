@@ -1,0 +1,156 @@
+<header class="clearfix" >
+
+    <!-- Logo -->
+    <div class="logo">
+        <a href="#/">
+            <!-- <span class="logo-icon glyphicon glyphicon-fire"></span> -->
+            <span>Data portal</span>
+        </a>
+    </div>
+
+    <!-- needs to be put after logo to make it working-->
+    <div class="menu-button" toggle-off-canvas>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </div>
+
+    <div class="top-nav">
+        <ul class="nav-left list-unstyled">
+            <li>
+                <a href="#/" data-toggle-min-nav
+                             class="toggle-min"
+                             ><i class="fa fa-bars"></i></a>
+            </li>
+            <li class="dropdown text-normal nav-profile"  dropdown is-open="status.isopenProfile">
+                <a href="javascript:;" class="dropdown-toggle" dropdown-toggle ng-disabled="disabled">
+                  
+                    <span class="hidden-xs">
+                        <span data-i18n="Filevault"></span>
+                    </span>
+                </a>
+                <ul class="dropdown-menu dropdown-dark with-arrow">
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-user"></i>
+                            <span data-i18n="files"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-check"></i>
+                            <span data-i18n="Tasks"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-lock"></i>
+                            <span data-i18n="doc"></span>
+                        </a>
+                    </li>
+                   
+                </ul>
+            </li>
+            <li class="dropdown langs text-normal nav-profile" data-ng-controller="LangCtrl"  dropdown is-open="status.isopenLang" >
+                <a href="javascript:;" class="dropdown-toggle active-flag" dropdown-toggle ng-disabled="disabled">
+                    <span class="hidden-xs">
+                        <span data-i18n="Admin"></span>
+                    </span>
+                </a>
+                <ul class="dropdown-menu dropdown-dark with-arrow">
+                    <li>
+                        <a href="#">
+                            
+                            <span data-i18n="help"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            
+                            <span data-i18n="Analysis"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                           
+                            <span data-i18n="page"></span>
+                        </a>
+                    </li>
+                   
+                </ul>
+            </li>
+
+<li class="dropdown langs text-normal nav-profile" data-ng-controller="LangCtrl"  >
+                <a  href="javascript:;" class="dropdown-toggle " dropdown-toggle ng-disabled="disabled">
+                    <span class="hidden-xs">
+                        <span data-i18n="marketing"></span>
+                    </span>
+                </a>
+</li>
+
+
+        </ul> 
+
+        <ul class="nav-right pull-right list-unstyled">
+            <li class="dropdown" dropdown is-open="status.isopenComment">
+                <a href="javascript:;" class="dropdown-toggle " dropdown-toggle ng-disabled="disabled">
+                    
+                    
+                </a>
+                
+            </li>
+          
+            <li class="dropdown" dropdown is-open="status.isopenBell">
+                <a href="javascript:;" class="dropdown-toggle " dropdown-toggle ng-disabled="disabled">
+                    
+                    <span>me</span>
+                </a>
+                <div class="dropdown-menu pull-right with-arrow panel panel-default">
+                    <div class="panel-heading">
+                        
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="javascript:;" class="media">
+                                <span class="media-left media-icon">
+                                    <span class="square-icon sm bg-success"><i class="fa fa-bell-o"></i></span>
+                                </span>
+                                <div class="media-body">
+                                    <span class="block">settings</span>
+                                   
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="javascript:;" class="media">
+                                <span class="media-left media-icon">
+                                    <span class="square-icon sm bg-info"><i class="fa fa-bell-o"></i></span>
+                                </span>
+                                <div class="media-body">
+                                    <span class="block">account</span>
+                                    
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="javascript:;" class="media">
+                                <span class="media-left media-icon">
+                                    <span class="square-icon sm bg-danger"><i class="fa fa-bell-o"></i></span>
+                                </span>
+                                <div class="media-body">
+                                    <span class="block">logout</span>
+                                    
+                                </div>
+                            </a>
+                        </li>                       
+                    </ul>
+                    <div class="panel-footer">
+                        <a href="javascript:;"></a>
+                    </div>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+
+</header>

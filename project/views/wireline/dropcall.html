@@ -1,0 +1,143 @@
+<div class="page page-form">
+    <div class="row">
+        <div class="col-md-6" data-ng-controller="formConstraintsCtrl">
+            <div class="panel panel-default">
+                <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Drop call Analysis</strong></div>
+                <div class="panel-body">
+                    <form name="form_constraints" class="form-validation" novalidate data-ng-submit="submitForm()">
+                        <div class="form-group">
+                            <label for="">Required</label>
+                            <input  type="text"
+                                    class="form-control"
+                                    required
+                                    data-ng-model="form.required"
+                            >
+                            <br>
+                            
+                            <input  type="checkbox"
+                                    id="required_checkbox"
+                                    required
+                                    data-ng-model="form.required_checkbox"> 
+                            <label for="required_checkbox">You need to agree to the Policy</label>
+                        </div>
+                      
+                        
+                                <div class="col-md-6">
+                                    <label for="">Confirm type</label>
+                                    <input  type="text"
+                                            class="form-control"
+                                            required
+                                            name="confirm_type"
+                                            data-ng-trim='false'
+                                            data-ng-model="form.confirm_type"
+                                            data-validate-equals="form.type_something"
+                                    >                        
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Equal to "foo"</label>
+                            <input  type="text"
+                                    class="form-control"
+                                    required
+                                    data-ng-model="form.foo"
+                                    data-ng-pattern="/^foo$/"
+                            >
+                            <span></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Email</label>
+                            <input  type="email"
+                                    class="form-control"
+                                    required
+                                    data-ng-model="form.email"
+                            >
+                            <span></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Url</label>
+                            <input  type="url"
+                                    class="form-control"
+                                    required
+                                    data-ng-model="form.url"
+                            >
+                            <span></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Must be a number</label>
+                            <input  type="number"
+                                    class="form-control"
+                                    required
+                                    name="form.num"
+                                    data-ng-model="form.num"
+                            >
+                            <span></span>
+                        </div>
+                        
+                        
+
+                        <button type="submit"
+                                class="btn btn-success"
+                                data-ng-disabled="!canSubmit()"
+                                >Submit</button>
+                        <button class="btn btn-default"
+                                data-ng-disabled="!canRevert()"
+                                data-ng-click="revert()"
+                        >Revert Changes</button>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Sign in Form</strong></div>
+                <div class="panel-body" data-ng-controller="signinCtrl">
+                    <form name="form_signin" class="form-horizontal form-validation" data-ng-submit="submitForm()">
+                        <fieldset>
+                            <div class="form-group">
+                                <div class="col-sm-3">
+                                    <label for="">Email</label>
+                                </div>
+                                <div class="col-sm-9">
+                                    <input type="email"
+                                           class="form-control"
+                                           required
+                                           data-ng-model="user.email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-3">
+                                    <label for="">Password</label>
+                                </div>
+                                <div class="col-sm-9">
+                                    <input type="password"
+                                           class="form-control"
+                                           required
+                                           data-ng-model="user.password">
+                                </div>
+                            </div>
+                            <button type="submit"
+                                    class="btn btn-success"
+                                    data-ng-disabled="!canSubmit()"
+                                    >Submit</button>
+                            <button class="btn btn-default"
+                                    data-ng-disabled="!canRevert()"
+                                    data-ng-click="revert()"
+                            >Revert Changes</button>
+                            <div class="callout callout-info">
+                                <p>Submit button will be active only when all fields are valid.</p>
+                                <p>Revert button will be active only when one or more fields is changed.</p>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="alert alert-info" data-ng-show="showInfoOnSubmit">This is just for demo. In real project, you will submit form with AJAX :)</div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+
+       
+    </div>
+</div>
